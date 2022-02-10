@@ -45,7 +45,11 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   height: 80px;
-  background-color: #2c61d4;
+  position: fixed;
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100vw;
 }
 
 nav .logo {
@@ -63,7 +67,7 @@ nav .logo img {
 }
 
 nav .logo h1 {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
@@ -85,7 +89,7 @@ nav ul .parent-li {
 }
 
 nav ul .parent-li .parent-a {
-  color: white;
+  color: black;
   font-weight: 400;
   border: 1px solid #5182ed;
   -webkit-box-sizing: border-box;
@@ -98,6 +102,7 @@ nav ul .parent-li .parent-a {
 
 nav ul .parent-li .parent-a:hover {
   background-color: #5182ed;
+  color: white;
 }
 
 nav ul .parent-li .active {
@@ -154,6 +159,8 @@ nav .dropdown ul li {
 
 nav .dropdown ul li a {
   color: black;
+  width: 250px;
+  display: block;
 }
 
 nav .dropdown ul li img {

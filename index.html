@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="./image/logo/logo 1.png" type="image/png" />
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>SMK yadika soreang</title>
@@ -28,20 +28,20 @@
             /></a>
             <ul>
               <li>
-                <a href=""
+                <a href="rpl.html"
                   ><img class="rpl" src="./image/logo/rpl.png" alt="" />
                   Rekayasa Perangkat Lunak</a
                 >
                 <hr />
               </li>
               <li>
-                <a href=""
+                <a href="hotel.html"
                   ><img src="./image/logo/hotel.png" alt="" /> Perhotelan</a
                 >
                 <hr />
               </li>
               <li>
-                <a href=""
+                <a href="akuntan.html"
                   ><img src="./image/logo/akuntan.png" alt="" /> Akuntansi</a
                 >
                 <hr />
@@ -172,6 +172,8 @@
           src="./image/logo/Vector 6.png"
           alt=""
         /> -->
+      </div>
+      <div class="content-bg">
       </div>
       <div class="content-header">
         <h6>Selamat Datang</h6>
@@ -333,6 +335,7 @@
   </div>
 
   <footer>
+    <div class="container-footer">
       <div class="fo-container">
       <div class="fo-logo">
           <img src="image/logo/logo.png" /></div>
@@ -340,7 +343,7 @@
           <p class="title">SMK Yadika Soreang</p>
           <p>Jl. Bojong Koneng No. 48, Kp. Karang Anyar No.RT. 04/05, Cingcin, Kec. Soreang, Bandung, Jawa Barat 40921</p>
       </div>
-
+  
       <div class="social-media">
           <p>Social Media</p>
           <div class="so-logo">
@@ -361,7 +364,44 @@
           <img src="image/logo/icons8-love-64.png" />
       </div>
   </div>
+  </div>
   </footer>
+  
 </div>
+
+
+<!-- animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from('nav', {duration: 1.5, y:-10, opacity:0})
+  gsap.from('.overlay', {duration: 1.5, y:-10, opacity:0})
+  gsap.from('.content-text', {duration: 1, x: -50, delay:0.6, opacity: 0})
+  gsap.to('.content-header', {
+    scrollTrigger:'.content-header',
+    duration: 0.5, 
+    opacity:1
+  })
+  
+  gsap.to('.content-texts', {
+      scrollTrigger: '.content-texts',
+      opacity: 1,
+      delay: 0.5,
+      duration: 0.5
+  })
+
+  // ScrollTrigger
+//   gsap.from(".content-header", {
+//   scrollTrigger : 'content-header"',
+//   x: 50,
+//   // opacity: 0,
+//   duration:3
+// })
+</script>
+<!-- animation end -->
+
   </body>
 </html>
